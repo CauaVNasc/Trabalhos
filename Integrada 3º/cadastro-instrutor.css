@@ -1,0 +1,80 @@
+html {
+    background: url(Design\ sem\ nome\ \(1\).jpg) no-repeat fixed;
+    background-size: cover;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+legend{
+    color: grey;
+}
+.box{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fbfbff3a;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    width: 600px;
+}
+fieldset{
+    border: 3px solid white;
+    display: block;
+}
+legend{
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: white;
+}
+
+#submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    height: 50px;
+}
+
+#submit:hover{
+    background-color: black;
+    color: white;
+}
+

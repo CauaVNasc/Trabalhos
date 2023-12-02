@@ -1,0 +1,289 @@
+/*
+CREATE TABLE instrutores (
+  id INT PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  formacao VARCHAR(255) NOT NULL,
+  experiencia INT NOT NULL,
+  cargo VARCHAR(255) NOT NULL,
+  telefone VARCHAR(255),
+  email VARCHAR(255)
+);
+
+CREATE TABLE cursos (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255),
+    requisito TEXT,
+    carga_horaria INT,
+    preco DECIMAL(7,2)
+);
+
+
+CREATE TABLE alunos (
+    id INT PRIMARY KEY,
+    cpf CHAR(11),
+    nome VARCHAR(255),
+    email VARCHAR(255),
+    telefone CHAR(11),
+    data_nascimento DATE
+);
+
+CREATE TABLE turmas (
+    id INT PRIMARY KEY,
+    nome VARCHAR (55),
+    curso_id INT NOT NULL,
+    sala_id INT not NULL,
+    turno VARCHAR(15) NOt NULL,
+    horario VARCHAR(55),
+    CONSTRAINT fk_turmas_salas FOREIGN KEY (sala_id) REFERENCES salas(id),
+    CONSTRAINT fk_turmas_cursos FOREIGN KEY (curso_id) REFERENCES cursos(id)
+);
+
+CREATE TABLE matriculas (
+    id INT PRIMARY KEY,
+    curso_id INT NOT NULL,
+    inicio DATE Not NULL,
+    fim DATE not NULL,
+    valor INT not NULL,
+    turma_id INT NOT NULL,
+    aluno_id INT NOT NULL,
+    data_matricula DATE,
+    CONSTRAINT fk_matriculas_turmas FOREIGN KEY (turma_id) REFERENCES turmas(id),
+    CONSTRAINT fk_matriculas_alunos FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+);
+
+CREATE TABLE disciplinas (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255),
+    carga_horaria INT,
+    curso_id INT NOT NULL,
+    CONSTRAINT fk_disciplinas_cursos FOREIGN KEY (curso_id) REFERENCES cursos(id)
+);
+
+CREATE TABLE notas (
+    id INT PRIMARY KEY,
+    aluno_id INT NOT NULL,
+    disciplina_id INT NOT NULL,
+    nota DECIMAL(3,1),
+    CONSTRAINT fk_notas_alunos FOREIGN KEY (aluno_id) REFERENCES alunos(id),
+    CONSTRAINT fk_notas_disciplinas FOREIGN KEY (disciplina_id) REFERENCES disciplinas(id)
+);
+
+CREATE TABLE funcionarios (
+   id INT PRIMARY KEY,
+   nome VARCHAR(255),
+   cargo VARCHAR(255),
+   email VARCHAR(255),
+   telefone CHAR(11)
+);
+
+CREATE TABLE salas (
+   id INT PRIMARY KEY,
+   numero_sala VARCHAR(10),
+   capacidade INT,
+   situacao VARCHAR(255)
+);
+
+CREATE TABLE eventos (
+   id INT PRIMARY KEY,
+   nome VARCHAR(255),
+   data DATE,
+   descricao TEXT
+);
+
+INSERT INTO alunos (id, cpf, nome, email, telefone, data_nascimento) VALUES
+(1, '12345678900', 'Maria Silva', 'maria.silva@email.com', '11999999999', '1990-01-01'),
+(2, '98765432109', 'José Santos', 'jose.santos@email.com', '11888888888', '1991-02-02'),
+(3, '09876543210', 'Ana Paula', 'ana.paula@email.com', '11777777777', '1992-03-03'),
+(4, '98765432101', 'João Pedro', 'joao.pedro@email.com', '11666666666', '1993-04-04'),
+(5, '09876543211', 'Letícia Souza', 'leticia.souza@email.com', '11555555555', '1994-05-05'),
+(6, '98765432102', 'Pedro Henrique', 'pedro.henrique@email.com', '11444444444', '1995-06-06'),
+(7, '09876543212', 'Gabriela Martins', 'gabriela.martins@email.com', '11333333333', '1996-07-07'),
+(8, '98765432103', 'Carlos Alberto', 'carlos.alberto@email.com', '11222222222', '1997-08-08'),
+(9, '09876543213', 'Fernanda Lopes', 'fernanda.lopes@email.com', '11111111111', '1998-09-09'),
+(10, '98765432104', 'Matheus Pereira', 'matheus.pereira@email.com', '11000000000', '1999-10-10'),
+(11, '09876543214', 'Isabella Silva', 'isabella.silva@email.com', '11999999998', '2000-11-11'),
+(12, '98765432105', 'Guilherme Santos', 'guilherme.santos@email.com', '11888888887', '2001-12-12'),
+(13, '09876543215', 'Clara Souza', 'clara.souza@email.com', '11777777776', '2002-01-13'),
+(14, '98765432106', 'Rafaela Martins', 'rafaela.martins@email.com', '11666666665', '2003-02-14');
+
+INSERT INTO cursos (id, nome, requisito, carga_horaria, preco) VALUES
+(1, 'Programação de Computadores', 'Ensino Médio completo', 420, 5000),
+(2, 'Design Gráfico', 'Ensino Médio completo', 360, 4000),
+(3, 'Marketing Digital', 'Ensino Médio completo', 240, 3000),
+(4, 'Gestão de Negócios', 'Ensino Médio completo', 300, 4000),
+(5, 'Línguas Estrangeiras', 'Ensino Médio completo', 240, 3000),
+(6, 'Administração', 'Ensino Médio completo', 300, 4000),
+(7, 'Ciências Contábeis', 'Ensino Médio completo', 360, 4000),
+(8, 'Engenharia Civil', 'Ensino Médio completo', 600, 8000),
+(9, 'Engenharia Mecânica', 'Ensino Médio completo', 600, 8000),
+(10, 'Engenharia Elétrica', 'Ensino Médio completo', 600, 8000),
+(11, 'Direito', 'Ensino Médio completo', 600, 8000),
+(12, 'Medicina', 'Ensino Médio completo', 1000, 12000),
+(13, 'Odontologia', 'Ensino Médio completo', 800, 10000),
+(14, 'Psicologia', 'Ensino Médio completo', 600, 8000),
+(15, 'Farmácia', 'Ensino Médio completo', 800, 10000),
+(16, 'Enfermagem', 'Ensino Médio completo', 600, 8000),
+(17, 'Arquitetura e Urbanismo', 'Ensino Médio completo', 600, 8000),
+(18, 'Publicidade e Propaganda', 'Ensino Médio completo', 360, 4000),
+(19, 'Jornalismo', 'Ensino Médio completo', 300, 4000),
+(20, 'Ciência da Computação', 'Ensino Médio completo', 420, 5000);
+
+INSERT INTO disciplinas (id, nome, carga_horaria, curso_id) VALUES
+(1, 'Lógica de Programação', 60, 1),
+(2, 'Algoritmos e Estruturas de Dados', 60, 1),
+(3, 'Programação Orientada a Objetos', 60, 1),
+(4, 'Banco de Dados', 60, 1),
+(5, 'Redes de Computadores', 60, 1),
+(6, 'Sistemas Operacionais', 60, 1),
+(7, 'Inglês Instrumental', 60, 1),
+(8, 'Fundamentos de Design Gráfico', 60, 2),
+(9, 'Composição e Ilustração', 60, 2),
+(10, 'Design Web', 60, 2),
+(11, 'Marketing Digital', 60, 3),
+(12, 'Análise de Dados', 60, 3),
+(13, 'Gestão de Marketing', 60, 3),
+(14, 'Administração Geral', 60, 4),
+(15, 'Contabilidade', 60, 4),
+(16, 'Economia', 60, 4),
+(17, 'Inglês Instrumental', 60, 4),
+(18, 'Francês Básico', 60, 4),
+(19, 'Alemão Básico', 60, 4),
+(20, 'Espanhol Básico', 60, 4);
+
+INSERT INTO eventos (id, nome, data, descricao) VALUES
+(1, 'Palestra sobre Inteligência Artificial', '2023-10-20', 'Palestra sobre os avanços recentes em Inteligência Artificial'),
+(2, 'Workshop de programação', '2023-11-03', 'Workshop para aprender a programar'),
+(3, 'Exposição de arte', '2023-12-01', 'Exposição de obras de arte de artistas locais'),
+(4, 'Concerto de música clássica', '2024-01-15', 'Concerto de música clássica com a Orquestra Sinfônica da cidade'),
+(5, 'Festival de cinema', '2024-02-22', 'Festival de cinema com filmes de vários países'),
+(6, 'Seminário sobre educação', '2024-03-29', 'Seminário sobre as tendências da educação no futuro');
+
+INSERT INTO funcionarios (id, nome, cargo, email, telefone) VALUES
+(1, 'João da Silva', 'Diretor', 'joao.silva@email.com', '11999999999'),
+(2, 'Maria da Costa', 'Gerente de Cursos', 'maria.costa@email.com', '11888888888'),
+(3, 'José dos Santos', 'Professor', 'jose.santos@email.com', '11777777777'),
+(4, 'Ana Paula Pereira', 'Secretária', 'ana.pereira@email.com', '11666666666'),
+(5, 'Pedro Henrique Silva', 'Instrutor de Informática', 'pedro.silva@email.com', '11555555555'),
+(6, 'Gabriela Martins', 'Instrutora de Design Gráfico', 'gabriela.martins@email.com', '11444444444'),
+(7, 'Carlos Alberto Soares', 'Técnico de Informática', 'carlos.soares@email.com', '11333333333'),
+(8, 'Fernanda Lopes Oliveira', 'Técnica de Design Gráfico', 'fernanda.lopes@email.com', '11222222222'),
+(9, 'Matheus Pereira da Silva', 'Auxiliar Administrativo', 'matheus.pereira@email.com', '11111111111'),
+(10, 'Isabella Silva Santos', 'Auxiliar de Instrutor', 'isabella.silva@email.com', '11999999998'),
+(11, 'Guilherme Santos da Silva', 'Auxiliar de TI', 'guilherme.santos@email.com', '11888888887'),
+(12, 'Clara Souza da Silva', 'Auxiliar de Limpeza', 'clara.souza@email.com', '11777777776');
+
+INSERT INTO instrutores (id, nome, cargo, email, telefone, formacao, experiencia) VALUES
+(1, 'João da Silva', 'Instrutor de Informática', 'joao.silva@email.com', '11999999999', 'Engenheiro de Software', '5 anos'),
+(2, 'Maria da Costa', 'Instrutora de Design Gráfico', 'maria.costa@email.com', '11888888888', 'Designer Gráfico', '10 anos'),
+(3, 'José dos Santos', 'Instrutor de Marketing Digital', 'jose.santos@email.com', '11777777777', 'Publicitário', '7 anos'),
+(4, 'Ana Paula Pereira', 'Instrutora de Línguas Estrangeiras', 'ana.pereira@email.com', '11666666666', 'Pedagoga', '15 anos'),
+(5, 'Pedro Henrique Silva', 'Instrutor de Administração', 'pedro.silva@email.com', '11555555555', 'Administrador', '2 anos'),
+(6, 'Gabriela Martins', 'Instrutora de Ciências Contábeis', 'gabriela.martins@email.com', '11444444444', 'Contadora', '3 anos'),
+(7, 'Carlos Alberto Soares', 'Instrutor de Engenharia Civil', 'carlos.soares@email.com', '11333333333', 'Engenheiro Civil', '10 anos'),
+(8, 'Fernanda Lopes Oliveira', 'Instrutora de Engenharia Mecânica', 'fernanda.lopes@email.com', '11222222222', 'Engenheira Mecânica', '5 anos'),
+(9, 'Matheus Pereira da Silva', 'Instrutor de Engenharia Elétrica', 'matheus.pereira@email.com', '11111111111', 'Engenheiro Eletricista', '4 anos'),
+(10, 'Isabella Silva Santos', 'Instrutora de Direito', 'isabella.silva@email.com', '11999999998', 'Advogada', '3 anos'),
+(11, 'Guilherme Santos da Silva', 'Instrutor de Medicina', 'guilherme.santos@email.com', '11888888887', 'Médico', '12 anos'),
+(12, 'Clara Souza da Silva', 'Instrutora de Odontologia', 'clara.souza@email.com', '11777777776', 'Dentista', '8 anos'),
+(13, 'Rafaela Martins', 'Instrutora de Psicologia', 'rafaela.martins@email.com', '11666666665', 'Psicóloga', '6 anos'),
+(14, 'Arthur Pereira', 'Instrutor de Farmácia', 'arthur.pereira@email.com', '11555555554', 'Farmacêutico', '5 anos'),
+(15, 'Leticia Souza', 'Instrutora de Enfermagem', 'leticia.souza@email.com', '11444444443', 'Enfermeira', '4 anos');
+
+INSERT INTO matriculas (id, curso_id, inicio, fim, valor, turma_id, aluno_id, data_matricula) VALUES
+(1, 1, '2023-09-26', '2024-03-26', 1000, 1, 1, '2023-09-26'),
+(2, 2, '2023-09-26', '2024-03-26', 2000, 2, 2, '2023-09-26'),
+(3, 3, '2023-09-26', '2024-03-26', 3000, 3, 3, '2023-09-26'),
+(4, 4, '2023-09-26', '2024-03-26', 4000, 4, 4, '2023-09-26'),
+(5, 5, '2023-09-26', '2024-03-26', 5000, 5, 5, '2023-09-26'),
+(6, 1, '2023-10-03', '2024-04-03', 1000, 6, 6, '2023-10-03'),
+(7, 2, '2023-10-03', '2024-04-03', 2000, 7, 7, '2023-10-03'),
+(8, 3, '2023-10-03', '2024-04-03', 3000, 8, 8, '2023-10-03'),
+(9, 4, '2023-10-03', '2024-04-03', 4000, 9, 9, '2023-10-03'),
+(10, 5, '2023-10-03', '2024-04-03', 5000, 10, 10, '2023-10-03'),
+(11, 1, '2023-10-10', '2024-04-10', 1000, 11, 11, '2023-10-10'),
+(12, 2, '2023-10-10', '2024-04-10', 2000, 12, 12, '2023-10-10'),
+(13, 3, '2023-10-10', '2024-04-10', 3000, 13, 13, '2023-10-10'),
+(14, 4, '2023-10-10', '2024-04-10', 4000, 14, 14, '2023-10-10');
+
+
+INSERT INTO notas (id, aluno_id, disciplina_id, nota) VALUES
+(1, 1, 1, 9.5),
+(2, 1, 2, 8.0),
+(3, 1, 3, 7.5),
+(4, 1, 4, 6.0),
+(5, 1, 5, 5.5),
+(6, 2, 6, 9.0),
+(7, 2, 7, 8.5),
+(8, 2, 8, 7.0),
+(9, 2, 9, 6.5),
+(10, 2, 10, 5.0),
+(11, 3, 11, 9.5),
+(12, 3, 12, 8.0),
+(13, 3, 13, 7.5),
+(14, 3, 14, 6.0),
+(15, 3, 15, 5.5),
+(16, 4, 16, 9.0),
+(17, 4, 17, 8.5),
+(18, 4, 18, 7.0),
+(19, 4, 19, 6.5),
+(20, 4, 20, 5.0),
+(21, 5, 21, 9.5),
+(22, 5, 22, 8.0),
+(23, 5, 23, 7.5),
+(24, 5, 24, 6.0),
+(25, 5, 25, 5.5);
+
+INSERT INTO salas (id, numero_sala, capacidade, situacao) VALUES
+(1, 101, 30, 'Disponível'),
+(2, 102, 20, 'Ocupada'),
+(3, 103, 40, 'Em Manutenção'),
+(4, 104, 50, 'Disponível'),
+(5, 105, 60, 'Ocupada'),
+(6, 106, 70, 'Em Manutenção'),
+(7, 107, 80, 'Disponível'),
+(8, 108, 90, 'Ocupada'),
+(9, 109, 100, 'Em Manutenção'),
+(10, 110, 110, 'Disponível'),
+(11, 111, 120, 'Ocupada'),
+(12, 112, 130, 'Em Manutenção'),
+(13, 113, 140, 'Disponível'),
+(14, 114, 150, 'Ocupada'),
+(15, 115, 160, 'Em Manutenção'),
+(16, 116, 170, 'Disponível'),
+(17, 117, 180, 'Ocupada'),
+(18, 118, 190, 'Em Manutenção'),
+(19, 119, 200, 'Disponível'),
+(20, 120, 210, 'Ocupada'),
+(21, 121, 220, 'Disponível'),
+(22, 122, 230, 'Disponível'),
+(23, 123, 240, 'Disponível'),
+(24, 124, 250, 'Disponível'),
+(25, 125, 260, 'Disponível'),
+(26, 126, 270, 'Disponível'),
+(27, 127, 280, 'Disponível'),
+(28, 128, 290, 'Disponível'),
+(29, 129, 300, 'Disponível'),
+(30, 130, 310, 'Disponível');
+
+INSERT INTO turmas (id, nome, curso_id, sala_id, turno, horario) VALUES
+(1, 'Turma 1', 1, 1, 'Manhã', '8h às 12h'),
+(2, 'Turma 2', 2, 2, 'Tarde', '14h às 18h'),
+(3, 'Turma 3', 3, 3, 'Noite', '19h às 23h'),
+(4, 'Turma 4', 4, 4, 'Manhã', '8h às 12h'),
+(5, 'Turma 5', 5, 5, 'Tarde', '14h às 18h'),
+(6, 'Turma 6', 6, 6, 'Noite', '19h às 23h'),
+(7, 'Turma 7', 7, 7, 'Manhã', '8h às 12h'),
+(8, 'Turma 8', 8, 8, 'Tarde', '14h às 18h'),
+(9, 'Turma 9', 9, 9, 'Noite', '19h às 23h'),
+(10, 'Turma 10', 10, 10, 'Manhã', '8h às 12h'),
+(11, 'Turma 11', 11, 11, 'Tarde', '14h às 18h'),
+(12, 'Turma 12', 12, 12, 'Noite', '19h às 23h'),
+(13, 'Turma 13', 13, 13, 'Manhã', '8h às 12h'),
+(14, 'Turma 14', 14, 14, 'Tarde', '14h às 18h'),
+(15, 'Turma 15', 15, 15, 'Noite', '19h às 23h'),
+(16, 'Turma 16', 16, 16, 'Manhã', '8h às 12h'),
+(17, 'Turma 17', 17, 17, 'Tarde', '14h às 18h'),
+(18, 'Turma 18', 18, 18, 'Noite', '19h às 23h'),
+(19, 'Turma 19', 19, 19, 'Manhã', '8h às 12h'),
+(20, 'Turma 20', 20, 20, 'Tarde', '14h às 18h');
+*/
