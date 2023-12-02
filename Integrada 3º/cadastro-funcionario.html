@@ -1,0 +1,67 @@
+<?php
+    if(isset($_POST['submit']))
+    {
+        //print_r($_POST['nome']);
+        //print_r($_POST['cpf']);
+        //print_r($_POST['data_nascimento']);
+
+        include_once('config.php');
+
+        $nome = $_POST['nome'];
+        $cargo= $_POST['cargo'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+
+
+        $result = mysqli_query($conexao, "INSERT INTO funcionario(nome,cargo,email,telefone) VALUES ('$nome','$cargo','$telefone','$email')");
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro-instrutor.css">
+    <title>Formulário decadastro do aluno</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+        $("#telefone").mask("(00) 0000-0000");
+        $("#cpf").mask("000.000.000-00");
+</script>
+
+</head>
+<body>
+    <div class="box">
+        <form action="cadastro-funcionario.php" method="POST">
+            <fieldset>
+                <legend><b>Cadastro - Funcionário</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cargo" id="cargo" class="inputUser" required>
+                    <label for="cargo" class="labelInput">Cargo</label>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br>
+                <input type="Submit" name="submit" id="submit" value="Finalizar">
+            </fieldset>
+        </form>
+        <br>
+    </div>
+
+</body>
+</html>
