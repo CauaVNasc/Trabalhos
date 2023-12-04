@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="I3.css">
+</head>
+<body>
+    <h1>Hobbies</h1>
+    <img src="https://instagram.fcgh38-1.fna.fbcdn.net/v/t51.2885-19/371738967_819605302961957_2416388322248294763_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fcgh38-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=fmDl7KWOJpIAX-UFh3u&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDo0HHzxdwumvMexP9tPIfRHao4XM42GZLV-k8PNXTWqg&oe=65714982&_nc_sid=8b3546" alt="Hobbies">
+    <div>
+        <h2>Gostos Pessoais</h2>
+        <ul>
+            <li class="faixa">Viajar</li>
+            <li class="faixa2">Jogos online</li>
+            <li class="faixa">Escutar musica</li>
+            <li class="faixa2">Sair com os amigos</li>
+        </ul>
+    </div>
+    <iframe src="https://www.youtube.com/embed/X4PIneqsmvk?autoplay=1&loop=1&playlist=X4PIneqsmvk" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div>
+        <h2>Personalidade</h2>
+        <ul>
+            <li class="faixa">Esforçado</li>
+            <li class="faixa2">Articulada</li>
+            <li class="faixa">Compreensivo</li>
+        </ul>
+    </div>
+    <p>São Paulo, 28 de novembro de 2023</p>
+    <button id="Btn">Painel</button>
+    <div id="Mdl" class="caixa">
+        <div class="caixa-c">
+            <span class="close">&times;</span>
+            <button onclick="window.location.href='Pag1.html'">Inicio</button>
+            <button onclick="window.location.href='CH.html'">Proximo</button>
+            <button onclick="window.location.href='Curriculo.html'">Voltar</button>
+        </div>
+    </div>
+    <script>
+        var Mdl = document.getElementById("Mdl");
+        var btn = document.getElementById("Btn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            Mdl.style.display = "block";
+        }
+        span.onclick = function() {
+            Mdl.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == Mdl) {
+                Mdl.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

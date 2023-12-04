@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência de Dados</title>
+    <link rel="stylesheet" href="I2.css">
+    <link rel="stylesheet" href="btn.css">
+    <style>
+        h2, h3 {
+            color: #8A2BE2;
+            transition: color 0.5s ease;
+        }
+        h1 {
+            color: #8A2BE2;
+            transition: color 0.5s ease;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="conteudo">
+            <h1>Bem-vindo à página sobre Ciência de Dados</h1>
+            <img src="https://th.bing.com/th/id/OIG.3Np3iulnmXEFf4qlhnIs?pid=ImgGn" alt="Imagem de Ciência de Dados">
+            <h2>O que é Ciência de Dados?</h2>
+            <p>A Ciência de Dados é um campo interdisciplinar que utiliza métodos científicos, processos, algoritmos e sistemas para extrair conhecimento e insights de dados estruturados e não estruturados. Ela é usada para fazer previsões e decisões informadas em diversas áreas, desde negócios até medicina.</p>
+            <h2>Aplicações de Ciência de Dados</h2>
+            <p>A Ciência de Dados tem uma ampla gama de aplicações, desde a análise de negócios e tomada de decisões até a inteligência artificial e aprendizado de máquina.</p>
+            <h2>Ciência de Dados em Negócios</h2>
+            <p>A Ciência de Dados está revolucionando a maneira como as empresas operam, ajudando-as a tomar decisões informadas com base em insights extraídos de grandes volumes de dados.</p>
+            <h2>Ciência de Dados na Medicina</h2>
+            <p>Na medicina, a Ciência de Dados é usada para tudo, desde a previsão de doenças até a personalização de tratamentos para pacientes individuais.</p>
+            <h2>Ciência de Dados na Inteligência Artificial</h2>
+            <p>A Ciência de Dados é fundamental para o desenvolvimento de sistemas de inteligência artificial, permitindo que as máquinas aprendam com os dados e melhorem seu desempenho ao longo do tempo.</p>
+            <h2>Empregos em Ciência de Dados</h2>
+            <p>A Ciência de Dados está criando novas oportunidades de emprego em diversas indústrias. Desde cientistas de dados até engenheiros de aprendizado de máquina, há uma demanda crescente por profissionais qualificados na área de Ciência de Dados.</p>
+            <h3>Cientistas de Dados</h3>
+            <p>Os cientistas de dados são responsáveis por coletar, analisar e interpretar grandes volumes de dados para ajudar as organizações a tomar decisões informadas. Eles usam uma variedade de ferramentas e técnicas para analisar os dados e extrair insights valiosos. Salário médio: <span class="salario">R$ 7.000 por mês</span>.</p>
+            <h3>Engenheiros de Dados</h3>
+            <p>Os engenheiros de dados são responsáveis por projetar, construir e gerenciar as infraestruturas de dados usadas para coletar e analisar grandes volumes de dados. Eles trabalham em estreita colaboração com cientistas de dados para garantir que os dados sejam coletados, armazenados e processados de maneira eficiente. Salário médio: <span class="salario">R$ 8.500 por mês</span>.</p>
+            <h3>Engenheiros de Aprendizado de Máquina</h3>
+            <p>Os engenheiros de aprendizado de máquina são responsáveis por desenvolver e implementar algoritmos de aprendizado de máquina que permitem que as máquinas aprendam com os dados e melhorem seu desempenho ao longo do tempo. Eles trabalham em uma variedade de aplicações, desde a previsão de vendas até o reconhecimento de imagem. Salário médio: <span class="salario">R$ 9.000 por mês</span>.</p>
+            <h3>Pesquisadores de Ciência de Dados</h3>
+            <p>Os pesquisadores de Ciência de Dados estão na vanguarda do campo, explorando novas maneiras de usar os dados para resolver problemas complexos. Eles conduzem estudos e experimentos para desenvolver novas técnicas e algoritmos de análise de dados. Salário médio: <span class="salario">R$ 6.500 por mês</span>.</p>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='IOT.html'">Proximo</button>
+                <button onclick="window.location.href='RA.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

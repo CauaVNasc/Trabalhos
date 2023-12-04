@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência Artificial</title>
+    <link rel="stylesheet" href="I2.css">
+    <link rel="stylesheet" href="btn.css">
+    <style>
+        h2, h3 {
+            color: #e67e22;
+            transition: color 0.5s ease;
+        }
+        h1 {
+            color: #e67e22;
+            transition: color 0.5s ease;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="conteudo">
+            <h1>Bem-vindo à página sobre Inteligência Artificial (IA)</h1>
+            <img src="https://th.bing.com/th/id/OIG..Xjus2LNMRkgPqTMZJOt?pid=ImgGn" alt="Imagem de Inteligência Artificial">
+            <h2>O que é Inteligência Artificial?</h2>
+            <p>A Inteligência Artificial é um ramo da ciência da computação que se concentra no desenvolvimento de máquinas e software com inteligência semelhante à humana. Isso inclui aprendizado, raciocínio, resolução de problemas, percepção e uso da linguagem.</p>
+            <h2>Aplicações da Inteligência Artificial</h2>
+            <p>A Inteligência Artificial tem uma ampla gama de aplicações, desde sistemas de recomendação e assistentes virtuais até veículos autônomos e diagnósticos médicos.</p>
+            <h2>Inteligência Artificial em Negócios</h2>
+            <p>A IA está transformando a maneira como as empresas operam, ajudando-as a tomar decisões informadas, melhorar a eficiência e fornecer melhores experiências ao cliente.</p>
+            <h2>Inteligência Artificial na Saúde</h2>
+            <p>Na saúde, a IA é usada para tudo, desde a previsão de doenças até a personalização de tratamentos para pacientes individuais.</p>
+            <h2>Inteligência Artificial em Veículos Autônomos</h2>
+            <p>A IA é fundamental para o funcionamento dos veículos autônomos, permitindo que eles naveguem e tomem decisões de maneira segura e eficiente.</p>
+            <h2>Empregos em Inteligência Artificial</h2>
+            <p>A Inteligência Artificial está criando novas oportunidades de emprego em diversas indústrias. Desde engenheiros de IA até cientistas de dados e desenvolvedores de software, há uma demanda crescente por profissionais qualificados na área de IA.</p>
+            <h3>Engenheiros de IA</h3>
+            <p>Os engenheiros de IA são responsáveis por projetar e implementar modelos e algoritmos de IA. Eles trabalham com uma variedade de tecnologias, incluindo aprendizado de máquina, processamento de linguagem natural e visão computacional. Salário médio: <span class="salario">R$ 8.000 por mês</span>.</p>
+            <h3>Cientistas de Dados</h3>
+            <p>Os cientistas de dados são responsáveis por coletar, analisar e interpretar grandes volumes de dados para ajudar as organizações a tomar decisões informadas. Eles usam uma variedade de ferramentas e técnicas, incluindo IA e aprendizado de máquina. Salário médio: <span class="salario">R$ 7.500 por mês</span>.</p>
+            <h3>Desenvolvedores de Software de IA</h3>
+            <p>Os desenvolvedores de software de IA são responsáveis por criar aplicativos e serviços que utilizam IA para melhorar a funcionalidade e a experiência do usuário. Eles podem trabalhar em uma variedade de plataformas, incluindo smartphones, tablets e computadores. Salário médio: <span class="salario">R$ 7.500 por mês</span>.</p>
+            <h3>Pesquisadores de IA</h3>
+            <p>Os pesquisadores de IA estão na vanguarda do campo, explorando novas maneiras de usar a IA para resolver problemas complexos. Eles conduzem estudos e experimentos para desenvolver novas técnicas e algoritmos de IA. Salário médio: <span class="salario">R$ 6.500 por mês</span>.</p>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='Curriculo.html'">Proximo</button>
+                <button onclick="window.location.href='IOT.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

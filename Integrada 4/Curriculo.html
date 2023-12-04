@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="I3.css">
+</head>
+<body>
+    <h1>Curriculo Cauã Valadão</h1>
+    <img src="Caua.jpg" alt="Professional">
+    <div>
+        <h2>Dados Pessoais</h2>
+        <p>Rua: AV. Nossa senhora da Sabara</p>
+        <p>Cidade: São Paulo</p>
+        <p>Telefone: (11)96423-4212</p>
+    </div>
+    <div>
+        <h2>Formação Academica</h2>
+        <p>Ensino medio Tecnico no Senac Nações Unidas</p>
+        <p>Duração: 36 meses</p>
+    </div>
+    <div>
+        <h2>Experiencia profissional</h2>
+        <ul>
+            <li class="faixa">Microsoft Office</li>
+            <li class="faixa2">Hardware</li>
+            <li class="faixa">Linux-Fedora</li>
+            <li class="faixa2">Windows Server</li>
+            <li class="faixa">Programação</li>
+            <li class="faixa2">Manipulação de banco de dados</li>
+            <li class="faixa">Manutenção de computadores</li>
+        </ul>
+    </div>
+    <p>São Paulo, 28 de novembro de 2023</p>
+    <button id="Btn">Painel</button>
+    <div id="Mdl" class="caixa">
+        <div class="caixa-c">
+            <span class="close">&times;</span>
+            <button onclick="window.location.href='Pag1.html'">Inicio</button>
+            <button onclick="window.location.href='Hobbies.html'">Proximo</button>
+            <button onclick="window.location.href='IA.html'">Voltar</button>
+        </div>
+    </div>
+    <script>
+        var Mdl = document.getElementById("Mdl");
+        var btn = document.getElementById("Btn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            Mdl.style.display = "block";
+        }
+        span.onclick = function() {
+            Mdl.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == Mdl) {
+                Mdl.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

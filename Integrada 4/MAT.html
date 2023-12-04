@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Matemática</h1>
+        <p>
+            A <strong>matemática</strong> é o estudo das propriedades e as relações dos números e dos objetos abstratos. Seu objetivo é desvendar os mistérios do universo numérico, suas criações e fenômenos, buscando compreender como as leis matemáticas operam e de que maneira elas influenciam nosso cotidiano.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Teorema fundamental de contagem</h2>
+            <img src="https://s1.static.brasilescola.uol.com.br/be/2020/05/analise-combinatoria.jpg" alt="Imagem de calculo">
+            <p>Exercícios de aplicação e prática de teorema fundamental de contagem.</p>
+            <a href="https://senacspedu.sharepoint.com/:w:/s/Section_sec_15359900248072/EWUcYSV94fVHns5RTySWB2UBQP8mQ6WdwoHhV0mOqJ1DWA?e=KaX1Na">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Permutação e Combinação</h2>
+            <img src="https://educacionalplenus.com.br/wp-content/uploads/2016/08/q24-300x222.jpg" alt="Imagem da Geometria">
+            <p>Questões dos conceitos básicos de permutação, arranjo e combinação e suas aplicações.</p>
+            <a href="https://senacspedu-my.sharepoint.com/:w:/g/personal/caio_vmtrindade_senacsp_edu_br/EciJJuIOuVZNrZ-c3p47SIEBLESrgkAqALntXlknJhcedw?e=DLyftd">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Probabilidade</h2>
+            <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo_legenda/64dfbf5b91bd9ee80044ce9184af7575.jpg" alt="Imagem do Cálculo">
+            <p>Questões dos conceitos básicos de probabilidade, voltados para o estudo de estatística.</p>
+            <a href="https://senacspedu.sharepoint.com/:w:/s/Section_sec_15359900248072/EeI7RmKnQuJDr61mi2uzAzIBaMg6AAeESDxkEajGAuDbKg?e=PIl6A3">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='LING.html'">Proximo</button>
+                <button onclick="window.location.href='CN.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto do Ano</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Projeto do Ano</h1>
+        <p>
+            O <strong>projeto do ano</strong> é um conjunto de atividades planejadas e executadas em um determinado período de tempo, com o objetivo de alcançar metas específicas. Seu objetivo é desvendar os mistérios da gestão de projetos, suas criações e fenômenos, buscando compreender como as leis da gestão de projetos operam e de que maneira elas influenciam nosso cotidiano.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Voop store</h2>
+            <img src="https://www.globalmixx.com.br/wp-content/uploads/2018/08/f5457472f3b4e4389ddf6fe9b8db7319-1.jpg" alt="Imagem de uma camiseta sendo estampada">
+            <p>Uma apresentação sobre o projeto de uma marca de roupa.</p>
+            <a href="https://www.canva.com/design/DAFNGHmmCEg/3uxpo3P_hYzwtD87yj_o2g/edit?utm_content=DAFNGHmmCEg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Diabo veste farda</h2>
+            <img src="https://live.staticflickr.com/1742/28809920748_87e31aa7d6_h.jpg" alt="Imagem de uma pixação">
+            <p>Postagem de uma camiseta.</p>
+            <a href="https://www.instagram.com/p/Cv0nqHHAAC2/?utm_source=ig_web_copy_link">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2> Estampando as camisetas</h2>
+            <img src="https://www.camisetasrapido.com.br/wp-content/uploads/2022/10/estampar-camisetas-scaled.jpg" alt="Imagem de uma camiseta estampada">
+            <p>Postagem de estampando as camisetas.</p>
+            <a href="https://www.instagram.com/reel/ClHcisUpuH2/?utm_source=ig_web_copy_link&igshid=NTYzOWQzNmJjMA==">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='RV.html'">Proximo</button>
+                <button onclick="window.location.href='TI.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

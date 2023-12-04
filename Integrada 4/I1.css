@@ -1,0 +1,31 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000b3;
+    border-radius: 10px;
+}
+.card {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}

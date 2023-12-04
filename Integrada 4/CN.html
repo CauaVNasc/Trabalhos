@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciências da Natureza</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Ciências da Natureza</h1>
+        <p>
+            As <strong>ciências da natureza</strong> são um conjunto de conhecimentos com o objetivo do estudo dos fenômenos naturais. Seu objetivo é desvendar os mistérios do universo, suas criações e fenômenos, buscando compreender como as leis naturais operam e de que maneira elas influenciam nosso cotidiano.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Estudo dos moluscos</h2>
+            <img src="https://s5.static.brasilescola.uol.com.br/be/2020/11/polvo.jpg" alt="Imagem de um molusco">
+            <p>Uma apresentação sobre os moluscos.</p>
+            <a href="https://www.canva.com/design/DAFx2WDnhig/cKNveWnyRkR0tIcRqful8w/edit?utm_content=DAFx2WDnhig&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Jogos Vorazes</h2>
+            <img src="https://vivariomarrecife.com.br/wp-content/uploads/2019/06/Capa-9.jpg" alt="Imagem do Jogos Vorazes">
+            <p>Aprensentaçao da relação de algumas cenas com fisica, quimica e biologia.</p>
+            <a href="https://www.canva.com/design/DAF08Vx-zWA/SPCYEWGfCBUpueZDU7yLYg/edit?utm_content=DAF08Vx-zWA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Chernobyl</h2>
+            <img src="https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2020/04/14194433/15-coisas-que-voce-precisa-saber-sobre-o-acidente-de-chernobyl.jpg?fit=1280%2C850&ssl=1" alt="Imagem de Chernobyl">
+            <p>Uma entrevista sobre Chernobyl.</p>
+            <a href="https://www.youtube.com/watch?v=LWb3nf2p5es">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='MAT.html'">Proximo</button>
+                <button onclick="window.location.href='CH.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

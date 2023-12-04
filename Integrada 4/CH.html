@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciências Humanas</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Ciências Humanas</h1>
+        <p>
+            As <strong>ciências humanas</strong> são um conjunto de conhecimentos com o objetivo do estudo do homem como ser social. Seu objetivo é desvendar as complexidades da sociedade, suas criações e pensamentos, buscando compreender como as relações sociais se formam e de que maneira elas vão se estabelecendo ao longo do tempo.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Uso das trincheiras como artifício de guerra</h2>
+            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/wwi-trench-archaeology-01.jpg?w=1900&h=1447" alt="Imagem das Tricheiras">
+            <p>Uma apresentação sobre as trincheiras.</p>
+            <a href="https://www.canva.com/design/DAFseYO2JQ0/mbgCXAHzpbJ_BrjDsz6JPA/edit?utm_content=DAFseYO2JQ0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Potências mundiais</h2>
+            <img src="https://segredosdomundo.r7.com/wp-content/uploads/2021/10/simbolo-da-onu-conheca-a-historia-por-tras-do-emblema.jpg" alt="Imagem da ONU">
+            <p>Uma analise de países com possibilidades de serem Potências mundiais.</p>
+            <a href="https://www.canva.com/design/DAFdySwY1RM/q1nEPheVM44B87pd3yMtxw/edit?utm_content=DAFdySwY1RM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Globalização e Cultura</h2>
+            <img src="https://i.ytimg.com/vi/vVmIRJWkYmM/sddefault.jpg?v=638779e3" alt="Imagem do SENAMUN">
+            <p>O DPO feito para o SENAMUN.</p>
+            <a href="https://senacspedu-my.sharepoint.com/:w:/g/personal/caua_vnascimento_senacsp_edu_br/EZBDVZsSwvdGn8z17brty3MBrTKVYvObwi4Ov0zDj2V6Vw?e=zSam5S">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='CN.html'">Proximo</button>
+                <button onclick="window.location.href='Hobbies.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

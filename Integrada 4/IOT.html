@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet das Coisas(IoT)</title>
+    <link rel="stylesheet" href="I2.css">
+    <link rel="stylesheet" href="btn.css">
+    <style>
+        h2, h3 {
+            color: #ffe600;
+            transition: color 0.5s ease;
+        }
+        h1 {
+            color: #ffe600;
+            transition: color 0.5s ease;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="conteudo">
+            <h1>Bem-vindo à página sobre Internet das Coisas (IoT)</h1>
+            <img src="https://th.bing.com/th/id/OIG.RizfyxlHlqrH5wWZS98U?pid=ImgGn" alt="Imagem de Internet das Coisas">
+            <h2>O que é Internet das Coisas?</h2>
+            <p>A Internet das Coisas é um conceito que se refere à interconexão digital de objetos cotidianos com a internet. Em outras palavras, a IoT é uma rede de dispositivos físicos - veículos, eletrodomésticos, dispositivos portáteis e outros - que usam sensores e APIs para se conectar e trocar dados pela Internet.</p>
+            <h2>Aplicações da Internet das Coisas</h2>
+            <p>A Internet das Coisas tem uma ampla gama de aplicações, desde casas e cidades inteligentes até saúde, agricultura, meio ambiente, indústria e muito mais.</p>
+            <h2>Internet das Coisas em Casas Inteligentes</h2>
+            <p>A IoT está transformando nossas casas em "casas inteligentes", com dispositivos conectados que podem ser controlados remotamente por smartphones ou computadores. Luzes, termostatos, detectores de fumaça, sistemas de segurança - até mesmo geladeiras, fornos e fechaduras de portas - agora são capazes de se conectar à Internet e fornecer informações úteis.</p>
+            <h2>Internet das Coisas na Saúde</h2>
+            <p>Na saúde, a IoT oferece uma variedade de benefícios, incluindo monitoramento remoto de pacientes, manutenção de registros eletrônicos de saúde e até mesmo robótica médica.</p>
+            <h2>Internet das Coisas na Agricultura</h2>
+            <p>A IoT está desempenhando um papel cada vez mais importante na agricultura, permitindo que os agricultores monitorem campos, gado e até mesmo o clima em tempo real.</p>
+            <h2>Empregos na Internet das Coisas</h2>
+            <p>A Internet das Coisas está criando novas oportunidades de emprego em diversas indústrias. Desde engenheiros de IoT até analistas de dados e desenvolvedores de software, há uma demanda crescente por profissionais qualificados na área de IoT.</p>
+            <h3>Engenheiros de IoT</h3>
+            <p>Os engenheiros de IoT são responsáveis por projetar e implementar sistemas e infraestruturas de IoT. Eles trabalham com uma variedade de tecnologias, incluindo sensores, redes sem fio, e plataformas de análise de dados. Salário médio: <span class="salario">R$ 7.500 por mês</span>.</p>
+            <h3>Analistas de Dados de IoT</h3>
+            <p>Os analistas de dados de IoT são responsáveis por coletar, analisar e interpretar os dados gerados pelos dispositivos de IoT. Eles usam essas informações para ajudar as organizações a tomar decisões informadas e melhorar suas operações. Salário médio: <span class="salario">R$ 6.500 por mês</span>.</p>
+            <h3>Desenvolvedores de Software de IoT</h3>
+            <p>Os desenvolvedores de software de IoT são responsáveis por criar aplicativos e serviços que permitem aos usuários interagir com dispositivos de IoT. Eles podem trabalhar em uma variedade de plataformas, incluindo smartphones, tablets e computadores. Salário médio: <span class="salario">R$ 7.000 por mês</span>.</p>
+            <h3>Pesquisadores de IoT</h3>
+            <p>Os pesquisadores de IoT estão na vanguarda do campo, explorando novas maneiras de usar a IoT para resolver problemas complexos. Eles conduzem estudos e experimentos para desenvolver novas técnicas e tecnologias de IoT. Salário médio: <span class="salario">R$ 6.000 por mês</span>.</p>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='IA.html'">Proximo</button>
+                <button onclick="window.location.href='CD.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

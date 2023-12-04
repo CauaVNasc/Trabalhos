@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguagens</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Linguagens</h1>
+        <p>
+            As <strong>linguagens</strong> são um conjunto de símbolos e regras que permitem a comunicação e a expressão de ideias entre indivíduos. Seu objetivo é desvendar os mistérios da comunicação, suas criações e fenômenos, buscando compreender como as leis linguísticas operam e de que maneira elas influenciam nosso cotidiano.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Active Kids</h2>
+            <img src="https://ciaathleticasjc.com.br/wp-content/uploads/2020/03/Atividades-f%C3%ADsicas-para-crian%C3%A7as-como-escolher-o-melhor-exerc%C3%ADcio-f%C3%ADsico-1024x576.jpg" alt="Imagem de jogando bola">
+            <p>Uma conscientização que as crianças tem que fazer atividades física.</p>
+            <a href="https://www.canva.com/design/DAFtKk_Glp4/3HzLl0vVeGX_G8aBFC4eIQ/edit?utm_content=DAFtKk_Glp4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Realismo e Naturalismo</h2>
+            <img src="https://www.sosestudante.com/uploads/images/202301/image_750x_63c0beeb723c9.jpg" alt="Imagem de uma pintura">
+            <p>Uma apresentação sobre o Realismo e Naturalismo.</p>
+            <a href="https://www.canva.com/design/DAFbgILrjls/i2aohpGJlIc1QPp0BkPScw/view?utm_content=DAFbgILrjls&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu#1">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Livro de Minicontos</h2>
+            <img src="https://cdn.discordapp.com/attachments/777984462792818708/1180542688580345968/image.png?ex=657dcd0e&is=656b580e&hm=bb8d3143b2c8268dd37c98899633c24b60a5416882b319a818068362ede81779&" alt="Imagem da capa do livro">
+            <p>Um livro que eu e meus amigos escrevemos sobre o amor.</p>
+            <a href="https://www.canva.com/design/DAF0YBLXAOg/9SWzvOXGsruUSMaB3QgdPg/edit?utm_content=DAF0YBLXAOg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='TI.html'">Proximo</button>
+                <button onclick="window.location.href='MAT.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

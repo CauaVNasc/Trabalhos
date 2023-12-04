@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidade Virtual</title>
+    <link rel="stylesheet" href="I2.css">
+    <link rel="stylesheet" href="btn.css">
+    <style>
+        h2, h3 {
+            color: #5fd300;
+            transition: color 0.5s ease;
+        }
+        h1 {
+            color: #5fd300;
+            transition: color 0.5s ease;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="conteudo">
+            <h1>Bem-vindo à página sobre Realidade Aumentada (RA)</h1>
+            <img src="https://th.bing.com/th/id/OIG.9SF6GIWewwm.B.HmXa8Q?pid=ImgGn" alt="Imagem de Realidade Aumentada">
+            <h2>O que é Realidade Aumentada?</h2>
+            <p>A Realidade Aumentada é uma tecnologia que combina elementos do mundo real com elementos digitais gerados por computador. Isso é feito sobrepondo imagens digitais a imagens do mundo real.</p>
+            <h2>Aplicações da Realidade Aumentada</h2>
+            <p>A Realidade Aumentada tem uma ampla gama de aplicações, desde jogos e entretenimento até educação, treinamento e medicina.</p>
+            <h2>Realidade Aumentada em Negócios</h2>
+            <p>A RA está transformando a maneira como as empresas operam, ajudando-as a melhorar a eficiência, aprimorar o treinamento e fornecer melhores experiências ao cliente.</p>
+            <h2>Realidade Aumentada na Saúde</h2>
+            <p>Na saúde, a RA é usada para tudo, desde a visualização de anatomia em 3D até a assistência em cirurgias complexas.</p>
+            <h2>Realidade Aumentada em Educação</h2>
+            <p>A RA está revolucionando a educação, permitindo que os alunos visualizem conceitos complexos de maneira interativa e envolvente.</p>
+            <h2>Empregos em Realidade Aumentada</h2>
+            <p>A Realidade Aumentada está criando novas oportunidades de emprego em diversas indústrias. Desde designers de RA até desenvolvedores de software e especialistas em UX, há uma demanda crescente por profissionais qualificados na área de RA.</p>
+            <h3>Designers de RA</h3>
+            <p>Os designers de RA são responsáveis por criar experiências imersivas que combinam o mundo real com elementos digitais. Eles usam uma variedade de ferramentas e técnicas para projetar interfaces de usuário intuitivas e envolventes. Salário médio: <span class="salario">R$ 7.000 por mês</span>.</p>
+            <h3>Desenvolvedores de RA</h3>
+            <p>Os desenvolvedores de RA são responsáveis por programar as funcionalidades de aplicativos de RA. Eles trabalham com uma variedade de plataformas e linguagens de programação para criar experiências de RA envolventes e interativas. Salário médio: <span class="salario">R$ 8.500 por mês</span>.</p>
+            <h3>Especialistas em UX de RA</h3>
+            <p>Os especialistas em UX de RA são responsáveis por garantir que as experiências de RA sejam intuitivas e satisfatórias para os usuários. Eles realizam pesquisas com usuários, projetam interfaces de usuário e realizam testes de usabilidade para garantir que as experiências de RA atendam às necessidades dos usuários. Salário médio: <span class="salario">R$ 9.000 por mês</span>.</p>
+            <h3>Pesquisadores de RA</h3>
+            <p>Os pesquisadores de RA estão na vanguarda do campo, explorando novas maneiras de usar a RA para resolver problemas complexos. Eles conduzem estudos e experimentos para desenvolver novas técnicas e algoritmos de RA. Salário médio: <span class="salario">R$ 6.500 por mês</span>.</p>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='CD.html'">Proximo</button>
+                <button onclick="window.location.href='RV.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

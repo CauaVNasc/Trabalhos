@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidade Virtual</title>
+    <link rel="stylesheet" href="I2.css">
+    <link rel="stylesheet" href="btn.css">
+    <style>
+        h2, h3 {
+            color: #12e4f3;
+            transition: color 0.5s ease;
+        }
+        h1 {
+            color: #12e4f3;
+            transition: color 0.5s ease;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Bem-vindo a pagina sobre Realidade Virtual</h1>
+        <img src="https://th.bing.com/th/id/OIG.I4h_OJpB0HHd8LsOrguc?pid=ImgGn" alt="Imagem de Realidade Virtual">
+        <h2>O que é Realidade Virtual?</h2>
+        <p>A Realidade Virtual é uma tecnologia de interface avançada entre um usuário e um sistema operacional. O objetivo dessa tecnologia é recriar ao máximo a sensação de realidade para o usuário, levando-o a interagir com o ambiente durante um período de tempo.</p>
+        <h2>Aplicações de Realidade Virtual</h2>
+        <p>A Realidade Virtual tem uma ampla gama de aplicações, desde jogos e entretenimento até usos em medicina, treinamento militar, e muito mais.</p>
+        <h2>Realidade Virtual em Jogos</h2>
+        <p>A Realidade Virtual está revolucionando a indústria de jogos, proporcionando uma imersão sem precedentes e tornando a experiência de jogo mais realista e emocionante.</p>
+        <h2>Realidade Virtual na Medicina</h2>
+        <p>Na medicina, a Realidade Virtual é usada para tudo, desde o treinamento de cirurgiões até a reabilitação de pacientes. Ela permite que os médicos treinem em um ambiente seguro e controlado e ajuda os pacientes a se recuperarem de maneira mais eficaz.</p>
+        <h2>Realidade Virtual no Treinamento Militar</h2>
+        <p>O treinamento militar é outra área que se beneficia enormemente da Realidade Virtual. Ela permite que os soldados treinem em simulações realistas sem o risco de danos físicos.</p>
+        <h2>Empregos em Realidade Virtual</h2>
+        <p>A Realidade Virtual está criando novas oportunidades de emprego em diversas indústrias. Desde designers e desenvolvedores de jogos até engenheiros e pesquisadores, há uma demanda crescente por profissionais qualificados na área de Realidade Virtual.</p>
+        <h3>Designers de Realidade Virtual</h3>
+        <p>Os designers de Realidade Virtual são responsáveis por criar experiências imersivas e envolventes para os usuários. Eles trabalham com uma variedade de ferramentas e tecnologias para projetar ambientes, personagens e interações que parecem realistas e respondem de maneira natural aos movimentos do usuário. Salário médio: <span class="salario">R$ 6.000 por mês</span>.</p>
+        <h3>Desenvolvedores de Realidade Virtual</h3>
+        <p>Os desenvolvedores de Realidade Virtual usam linguagens de programação como C# e C++ para criar aplicativos e jogos de Realidade Virtual. Eles trabalham em estreita colaboração com designers e outros membros da equipe para implementar as visões criativas em experiências de Realidade Virtual. Salário médio: <span class="salario">R$ 4.166 por mês</span>.</p>
+        <h3>Engenheiros de Realidade Virtual</h3>
+        <p>Os engenheiros de Realidade Virtual trabalham no desenvolvimento de hardware e software para dispositivos de Realidade Virtual. Eles podem trabalhar em tudo, desde o design de fones de ouvido de Realidade Virtual até a criação de algoritmos para rastreamento de movimento e renderização de gráficos. Salário médio: <span class="salario">R$ 15.056 por mês</span>.</p>
+        <h3>Pesquisadores de Realidade Virtual</h3>
+        <p>Os pesquisadores de Realidade Virtual estão na vanguarda do campo, explorando novas maneiras de usar a Realidade Virtual para tudo, desde o tratamento de fobias até a melhoria do treinamento em habilidades motoras. Eles conduzem estudos e experimentos para entender melhor como a Realidade Virtual pode ser usada para beneficiar a sociedade. Salário médio: <span class="salario">R$ 5.006  por mês</span>.</p>
+    </div>
+    <button id="Btn">Painel</button>
+    <div id="Mdl" class="caixa">
+        <div class="caixa-c">
+            <span class="close">&times;</span>
+            <button onclick="window.location.href='Pag1.html'">Inicio</button>
+            <button onclick="window.location.href='RA.html'">Proximo</button>
+            <button onclick="window.location.href='PA.html'">Voltar</button>
+        </div>
+    </div>
+    <script>
+        var Mdl = document.getElementById("Mdl");
+        var btn = document.getElementById("Btn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            Mdl.style.display = "block";
+        }
+        span.onclick = function() {
+            Mdl.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == Mdl) {
+                Mdl.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia da Informação</title>
+    <link rel="stylesheet" href="I1.css">
+    <link rel="stylesheet" href="btn.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Tecnologia da Informação</h1>
+        <p>
+            A <strong>tecnologia da informação</strong> é um conjunto de tecnologias que envolve software, hardware, redes e bancos de dados para o gerenciamento de informações. Seu objetivo é desvendar os mistérios da comunicação digital, suas criações e fenômenos, buscando compreender como as leis da informática operam e de que maneira elas influenciam nosso cotidiano.
+        </p>
+        <p>
+            Além desse pequeno resumo, Tem alguns dos meus trabalhos da área:
+        </p>
+        <div class="card">
+            <h2>Integrada de TI</h2>
+            <img src="https://adamsilva.com.br/wp-content/uploads/2013/12/melhores-sites-tecnologia.jpg" alt="Imagem de TI">
+            <p>Um site e BD.</p>
+            <a href="https://github.com/CauaVNasc/Trabalhos/tree/6c11f56739a9edd904338bc244be2c83b3616709/Integrada%203%C2%BA">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>BD Clinica</h2>
+            <img src="https://blog.saninternet.com/wp-content/uploads/2022/04/banco-de-dados-solucoes-para-sua-empresa.jpg" alt="Imagem da Programação">
+            <p>Banco de dados de uma clinica.</p>
+            <a href="https://github.com/CauaVNasc/Trabalhos/blob/6c11f56739a9edd904338bc244be2c83b3616709/Clinica.sql">Veja o trabalho</a>
+        </div>
+        <div class="card">
+            <h2>Interface de um site</h2>
+            <img src="https://esr.rnp.br/wp-content/uploads/2021/03/chris-ried-ieic5Tq8YMk-unsplash-scaled-1.jpg" alt="Imagem da Programação">
+            <p>Interface informativa das Áreas do Conhecimento.</p>
+            <a href="https://github.com/CauaVNasc/Trabalhos/blob/6c11f56739a9edd904338bc244be2c83b3616709/Aulas.html">Veja o trabalho</a>
+        </div>
+        <button id="Btn">Painel</button>
+        <div id="Mdl" class="caixa">
+            <div class="caixa-c">
+                <span class="close">&times;</span>
+                <button onclick="window.location.href='Pag1.html'">Inicio</button>
+                <button onclick="window.location.href='PA.html'">Proximo</button>
+                <button onclick="window.location.href='LING.html'">Voltar</button>
+            </div>
+        </div>
+        <script>
+            var Mdl = document.getElementById("Mdl");
+            var btn = document.getElementById("Btn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                Mdl.style.display = "block";
+            }
+            span.onclick = function() {
+                Mdl.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == Mdl) {
+                    Mdl.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    </html>

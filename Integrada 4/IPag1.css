@@ -1,0 +1,36 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #333333;
+}
+
+.CH { background-color: #e4a332; }
+.CN { background-color: #148a45; }
+.MAT { background-color: #5090c4; }
+.LING { background-color: #e74c3c; }
+.TI { background-color: #114669; }
+.PA { background-color: #f312ce; }
+.RV { background-color: #12f3e8; }
+.RA { background-color: #5fd300; }
+.CD { background-color: #8A2BE2; }
+.IOT { background-color: #ffe600; }
+.IA { background-color: #e67e22; }
+.CL { background-color: #801422; }
+.HB { background-color: #1f0949; }

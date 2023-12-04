@@ -1,0 +1,26 @@
+body {
+    background-color: #282828;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+.conteudo {
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #383838;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.salario {
+    font-weight: bold;
+    color: #FFD700;
+}

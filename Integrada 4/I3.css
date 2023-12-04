@@ -1,0 +1,24 @@
+body {font-family: Arial, sans-serif;
+     background-color: #333;
+     color: #fff;
+     display: flex; 
+     flex-direction: column; 
+     align-items: center;
+}
+h1 {color: #fff;
+}
+p {line-height: 1.6;
+}
+div {border: 1px solid #fff; 
+    padding: 20px; margin: 10px; 
+    width: 80%; 
+    text-align: center;
+}
+.faixa {background-color: #555;
+    color: #fff; 
+    padding: 10px;
+}
+.faixa2 {background-color:#333; 
+    color: #fff; 
+    padding: 10px;
+}
